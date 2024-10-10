@@ -1,6 +1,6 @@
-# Happy Birthday Cam!
+# Happy Birthday!
 
-This is a fun birthday website dedicated to celebrating Cam's birthday! The site is designed using HTML, CSS, and JavaScript to create an interactive and festive experience.
+This is a fun birthday website dedicated to celebrating a birthday! The site is designed using HTML, CSS, and JavaScript to create an interactive and festive experience.
 
 ## Features
 
