@@ -1,0 +1,240 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+    position: relative; /* Position relative for the animated background */
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.balloon-container {
+    position: absolute;
+    top: -100px; /* Start above the viewport */
+    left: 0;
+    right: 0;
+    pointer-events: none; /* Ignore mouse events */
+    z-index: 10; /* Above everything else */
+}
+
+footer {
+    position: absolute; /* Position it at the bottom */
+    bottom: 20px; /* Distance from the bottom */
+    left: 0;
+    right: 0;
+    text-align: center; /* Center the text */
+    color: #ffffff; /* Text color */
+    font-size: 1rem; /* Font size */
+    z-index: 10; /* Above everything else */
+}
+
+footer a {
+    color: #FFD700; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Balloons and animations... */
+.balloon-container {
+    position: absolute;
+    top: -100px; /* Start above the viewport */
+    left: 0;
+    right: 0;
+    pointer-events: none; /* Ignore mouse events */
+    z-index: 10; /* Above everything else */
+}
+
+.balloon {
+    background-image: url('balloon.png'); /* Replace with your balloon image */
+    background-size: cover;
+    width: 50px; /* Balloon width */
+    height: 80px; /* Balloon height */
+    position: absolute;
+    animation: fall linear infinite; /* Apply the fall animation */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0); /* Start from the top */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateY(100vh); /* Fall to the bottom */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Randomize balloon positions and animation timing */
+.balloon:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(4) {
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.balloon:nth-child(5) {
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+/* Container styles and animations */
+.container {
+    position: relative; /* Position relative for the animated background */
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure text is above the background */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.birthday-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e6b800; /* Slightly darker yellow */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #FFD700;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#message.visible {
+    opacity: 1;
+}
+
+/* Party Hat Background Animation */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('party-hat.png'); /* Replace with your party hat image */
+    background-size: 100px 100px; /* Adjust size */
+    background-repeat: repeat;
+    opacity: 0.1; /* Make it subtle */
+    animation: float 6s ease-in-out infinite; /* Faster animation for more movement */
+    z-index: -1; /* Behind the container */
+}
+
+/* Other styles */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-15px); /* Increase upward movement */
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px); /* Add a slight downward movement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Smaller heading on mobile */
+    }
+
+    p {
+        font-size: 1.2rem; /* Smaller paragraph text */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 0.9rem; /* Smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Even smaller heading */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    button {
+        padding: 6px 12px; /* Smaller button padding */
+        font-size: 0.8rem; /* Smaller button text */
+    }
+}
