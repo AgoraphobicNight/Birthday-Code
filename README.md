@@ -20,3 +20,5 @@ This is a fun birthday website dedicated to celebrating a birthday! The site is 
 - This project was just a fun virtual birthday message that I thought others would enjoy. Feel free to use it for yourself! I’ve included comments in the code to assist those who may not be code-savvy.
 - Please note that I aimed for simplicity, so it’s a basic birthday message without extensive features.
 - You can view the live demo here: [https://codedcelebration.netlify.app/]
+
+ - (All projects are streamed Live over on my Twitch!)
